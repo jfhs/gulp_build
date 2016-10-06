@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var cleanCss = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
 var htmlreplace = require('gulp-html-replace');
-var ghtmlSrc = require('gulp-html-src');
+var domSrc = require('gulp-dom-src');
 var concat = require('gulp-concat');
 var htmlmin = require('gulp-htmlmin');
 var rev = require('gulp-rev');
@@ -16,17 +16,15 @@ gulp.task('clean', function() {
     return del(['dist', 'temp']);
 });
 
-gulp.task('build-js', function() {
-    return gulp.src('index.html')
-        .pipe(ghtmlSrc())
+gulp.task('build-js', ['clean'], function() {
+    return domSrc({file: 'index.html', selector: 'script', attribute: 'src'})
         .pipe(concat(OUT_JS_NAME))
         .pipe(uglify())
         .pipe(gulp.dest('temp'));
 });
 
-gulp.task('build-css', function() {
-    return gulp.src('index.html')
-        .pipe(ghtmlSrc({presets: 'css'}))
+gulp.task('build-css', ['clean'], function() {
+    return domSrc({file: 'index.html', selector: 'link[rel=stylesheet]', attribute: 'href'})
         .pipe(concat(OUT_CSS_NAME))
         .pipe(cleanCss())
         .pipe(gulp.dest('temp'));

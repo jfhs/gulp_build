@@ -13,9 +13,9 @@
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.13",
     "gulp-concat": "^2.6.0",
+    "gulp-dom-src": "^0.2.0",
     "gulp-fingerprint": "^0.3.2",
     "gulp-html-replace": "^1.6.1",
-    "gulp-html-src": "^1.0.0",
     "gulp-htmlmin": "^3.0.0",
     "gulp-rev": "^7.1.2",
     "gulp-uglify": "^2.0.0"
