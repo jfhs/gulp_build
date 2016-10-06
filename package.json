@@ -1,0 +1,23 @@
+{
+  "name": "gulp_build",
+  "version": "1.0.0",
+  "description": "Sample gulp build file for one-page landing pages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrey Mramornov <romoper@yandex.ru>",
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-concat": "^2.6.0",
+    "gulp-fingerprint": "^0.3.2",
+    "gulp-html-replace": "^1.6.1",
+    "gulp-html-src": "^1.0.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-rev": "^7.1.2",
+    "gulp-uglify": "^2.0.0"
+  }
+}
